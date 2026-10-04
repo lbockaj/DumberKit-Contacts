@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dpad_add_field">Lisää kenttä</string>
+    <string name="dpad_sort">Lajittele</string>
+    <string name="dpad_dialer">Puhelin</string>
+    <string name="dpad_pick_color">Väri</string>
+    <string name="dpad_pick_shade">Sävy</string>
+    <string name="dpad_jump_to_letter">Siirry kirjaimeen</string>
+    <string name="dpad_touch_input">Salli kosketusohjaus</string>
+</resources>

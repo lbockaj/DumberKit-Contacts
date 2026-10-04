@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dpad_add_field">ഫീൽഡ് ചേർക്കുക</string>
+    <string name="dpad_sort">ക്രമീകരിക്കുക</string>
+    <string name="dpad_dialer">ഫോൺ</string>
+    <string name="dpad_pick_color">നിറം</string>
+    <string name="dpad_pick_shade">ഷേഡ്</string>
+    <string name="dpad_jump_to_letter">അക്ഷരത്തിലേക്ക് പോകുക</string>
+    <string name="dpad_touch_input">സ്പർശന ഇൻപുട്ട് അനുവദിക്കുക</string>
+</resources>

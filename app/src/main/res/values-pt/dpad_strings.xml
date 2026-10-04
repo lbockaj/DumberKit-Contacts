@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dpad_add_field">Adicionar campo</string>
+    <string name="dpad_sort">Ordenar</string>
+    <string name="dpad_dialer">Telefone</string>
+    <string name="dpad_pick_color">Cor</string>
+    <string name="dpad_pick_shade">Tom</string>
+    <string name="dpad_jump_to_letter">Ir para a letra</string>
+    <string name="dpad_touch_input">Permitir entrada tátil</string>
+</resources>

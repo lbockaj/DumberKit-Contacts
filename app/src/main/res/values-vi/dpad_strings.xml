@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dpad_add_field">Thêm trường</string>
+    <string name="dpad_sort">Sắp xếp</string>
+    <string name="dpad_dialer">Điện thoại</string>
+    <string name="dpad_pick_color">Màu</string>
+    <string name="dpad_pick_shade">Sắc độ</string>
+    <string name="dpad_jump_to_letter">Chuyển đến chữ cái</string>
+    <string name="dpad_touch_input">Cho phép nhập bằng cảm ứng</string>
+</resources>

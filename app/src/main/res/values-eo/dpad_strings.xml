@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dpad_add_field">Aldoni kampon</string>
+    <string name="dpad_sort">Ordigi</string>
+    <string name="dpad_dialer">Telefono</string>
+    <string name="dpad_pick_color">Koloro</string>
+    <string name="dpad_pick_shade">Nuanco</string>
+    <string name="dpad_jump_to_letter">Iri al litero</string>
+    <string name="dpad_touch_input">Permesi tuŝan enigon</string>
+</resources>

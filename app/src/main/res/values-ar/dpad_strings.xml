@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dpad_add_field">إضافة حقل</string>
+    <string name="dpad_sort">فرز</string>
+    <string name="dpad_dialer">الهاتف</string>
+    <string name="dpad_pick_color">اللون</string>
+    <string name="dpad_pick_shade">الدرجة</string>
+    <string name="dpad_jump_to_letter">الانتقال إلى حرف</string>
+    <string name="dpad_touch_input">السماح بالإدخال باللمس</string>
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dpad_add_field">Magdagdag ng field</string>
+    <string name="dpad_sort">Pagbukud-bukurin</string>
+    <string name="dpad_dialer">Telepono</string>
+    <string name="dpad_pick_color">Kulay</string>
+    <string name="dpad_pick_shade">Lilim</string>
+    <string name="dpad_jump_to_letter">Pumunta sa titik</string>
+    <string name="dpad_touch_input">Payagan ang touch input</string>
+</resources>

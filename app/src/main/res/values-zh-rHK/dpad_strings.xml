@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dpad_add_field">新增欄位</string>
+    <string name="dpad_sort">排序</string>
+    <string name="dpad_dialer">電話</string>
+    <string name="dpad_pick_color">顏色</string>
+    <string name="dpad_pick_shade">深淺</string>
+    <string name="dpad_jump_to_letter">跳至字母</string>
+    <string name="dpad_touch_input">允許觸控輸入</string>
+</resources>

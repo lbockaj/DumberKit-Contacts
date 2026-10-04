@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dpad_add_field">Přidat pole</string>
+    <string name="dpad_sort">Seřadit</string>
+    <string name="dpad_dialer">Telefon</string>
+    <string name="dpad_pick_color">Barva</string>
+    <string name="dpad_pick_shade">Odstín</string>
+    <string name="dpad_jump_to_letter">Přejít na písmeno</string>
+    <string name="dpad_touch_input">Povolit dotykové ovládání</string>
+</resources>

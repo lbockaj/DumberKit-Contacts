@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dpad_add_field">항목 추가</string>
+    <string name="dpad_sort">정렬</string>
+    <string name="dpad_dialer">전화</string>
+    <string name="dpad_pick_color">색상</string>
+    <string name="dpad_pick_shade">음영</string>
+    <string name="dpad_jump_to_letter">글자로 이동</string>
+    <string name="dpad_touch_input">터치 입력 허용</string>
+</resources>

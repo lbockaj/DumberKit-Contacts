@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dpad_add_field">項目を追加</string>
+    <string name="dpad_sort">並べ替え</string>
+    <string name="dpad_dialer">電話</string>
+    <string name="dpad_pick_color">色</string>
+    <string name="dpad_pick_shade">濃淡</string>
+    <string name="dpad_jump_to_letter">文字へ移動</string>
+    <string name="dpad_touch_input">タッチ操作を許可</string>
+</resources>

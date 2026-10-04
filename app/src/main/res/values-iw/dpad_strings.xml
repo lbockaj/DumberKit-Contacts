@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dpad_add_field">הוספת שדה</string>
+    <string name="dpad_sort">מיון</string>
+    <string name="dpad_dialer">טלפון</string>
+    <string name="dpad_pick_color">צבע</string>
+    <string name="dpad_pick_shade">גוון</string>
+    <string name="dpad_jump_to_letter">מעבר לאות</string>
+    <string name="dpad_touch_input">אפשר קלט מגע</string>
+</resources>

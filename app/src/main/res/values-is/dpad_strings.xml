@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dpad_add_field">Bæta við reit</string>
+    <string name="dpad_sort">Raða</string>
+    <string name="dpad_dialer">Sími</string>
+    <string name="dpad_pick_color">Litur</string>
+    <string name="dpad_pick_shade">Blær</string>
+    <string name="dpad_jump_to_letter">Fara á staf</string>
+    <string name="dpad_touch_input">Leyfa snertiinntak</string>
+</resources>

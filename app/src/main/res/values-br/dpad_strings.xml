@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dpad_add_field">Ouzhpennañ ur vaezienn</string>
+    <string name="dpad_sort">Rummañ</string>
+    <string name="dpad_dialer">Pellgomz</string>
+    <string name="dpad_pick_color">Liv</string>
+    <string name="dpad_pick_shade">Arliv</string>
+    <string name="dpad_jump_to_letter">Mont d’al lizherenn</string>
+    <string name="dpad_touch_input">Aotren ar stokañ</string>
+</resources>

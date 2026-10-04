@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dpad_add_field">ಕ್ಷೇತ್ರ ಸೇರಿಸಿ</string>
+    <string name="dpad_sort">ವಿಂಗಡಿಸಿ</string>
+    <string name="dpad_dialer">ಫೋನ್</string>
+    <string name="dpad_pick_color">ಬಣ್ಣ</string>
+    <string name="dpad_pick_shade">ಛಾಯೆ</string>
+    <string name="dpad_jump_to_letter">ಅಕ್ಷರಕ್ಕೆ ಹೋಗಿ</string>
+    <string name="dpad_touch_input">ಸ್ಪರ್ಶ ಇನ್‌ಪುಟ್ ಅನುಮತಿಸಿ</string>
+</resources>

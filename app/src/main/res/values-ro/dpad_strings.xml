@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dpad_add_field">Adaugă câmp</string>
+    <string name="dpad_sort">Sortare</string>
+    <string name="dpad_dialer">Telefon</string>
+    <string name="dpad_pick_color">Culoare</string>
+    <string name="dpad_pick_shade">Nuanță</string>
+    <string name="dpad_jump_to_letter">Salt la literă</string>
+    <string name="dpad_touch_input">Permite introducerea prin atingere</string>
+</resources>

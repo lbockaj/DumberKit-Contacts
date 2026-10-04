@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- one row per account: its icon (or the messenger app icon) in the left icon column, like the other detail rows -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/contact_source_holder"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:gravity="center_vertical"
+    android:minHeight="@dimen/dpad_detail_section_icon_height"
+    android:orientation="horizontal">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/contact_source_image"
+        android:layout_width="@dimen/dpad_detail_icon_size"
+        android:layout_height="@dimen/dpad_detail_icon_size"
+        android:layout_marginStart="@dimen/normal_margin"
+        android:layout_marginEnd="@dimen/medium_margin"
+        android:contentDescription="@null"
+        android:focusable="false"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_account_box_vector"
+        app:shapeAppearanceOverlay="@style/roundedImageView"
+        tools:src="@drawable/ic_whatsapp_rect_vector" />
+
+    <org.fossify.commons.views.MyTextView
+        android:id="@+id/contact_source"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ellipsize="end"
+        android:focusable="false"
+        android:maxLines="1"
+        android:paddingStart="@dimen/small_margin"
+        android:paddingEnd="@dimen/normal_margin"
+        android:singleLine="true"
+        android:textSize="@dimen/bigger_text_size" />
+
+</LinearLayout>

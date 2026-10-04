@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dpad_add_field">புலத்தைச் சேர்</string>
+    <string name="dpad_sort">வரிசைப்படுத்து</string>
+    <string name="dpad_dialer">தொலைபேசி</string>
+    <string name="dpad_pick_color">நிறம்</string>
+    <string name="dpad_pick_shade">சாயல்</string>
+    <string name="dpad_jump_to_letter">எழுத்துக்குச் செல்</string>
+    <string name="dpad_touch_input">தொடு உள்ளீட்டை அனுமதி</string>
+</resources>

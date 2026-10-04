@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dpad_add_field">Legg til felt</string>
+    <string name="dpad_sort">Sorter</string>
+    <string name="dpad_dialer">Telefon</string>
+    <string name="dpad_pick_color">Farge</string>
+    <string name="dpad_pick_shade">Nyanse</string>
+    <string name="dpad_jump_to_letter">Gå til bokstav</string>
+    <string name="dpad_touch_input">Tillat berøring</string>
+</resources>

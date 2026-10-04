@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dpad_add_field">เพิ่มช่อง</string>
+    <string name="dpad_sort">จัดเรียง</string>
+    <string name="dpad_dialer">โทรศัพท์</string>
+    <string name="dpad_pick_color">สี</string>
+    <string name="dpad_pick_shade">เฉดสี</string>
+    <string name="dpad_jump_to_letter">ไปที่ตัวอักษร</string>
+    <string name="dpad_touch_input">อนุญาตการป้อนข้อมูลแบบสัมผัส</string>
+</resources>

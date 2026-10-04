@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dpad_add_field">Προσθήκη πεδίου</string>
+    <string name="dpad_sort">Ταξινόμηση</string>
+    <string name="dpad_dialer">Τηλέφωνο</string>
+    <string name="dpad_pick_color">Χρώμα</string>
+    <string name="dpad_pick_shade">Απόχρωση</string>
+    <string name="dpad_jump_to_letter">Μετάβαση σε γράμμα</string>
+    <string name="dpad_touch_input">Να επιτρέπεται η αφή</string>
+</resources>

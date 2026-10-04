@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Keypad friendly contact detail: photo + name on top, then everything in one column, so up/down reaches it all -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/contact_wrapper"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/contact_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/contact_holder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/normal_margin">
+
+            <!-- header -->
+            <ImageView
+                android:id="@+id/contact_photo"
+                android:layout_width="@dimen/dpad_contact_photo_size"
+                android:layout_height="@dimen/dpad_contact_photo_size"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/normal_margin"
+                android:contentDescription="@string/change_photo"
+                android:focusable="false"
+                android:scaleType="centerCrop"
+                tools:src="@drawable/ic_person_vector" />
+
+            <ImageView
+                android:id="@+id/contact_photo_bottom_shadow"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:contentDescription="@null"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/dpad_header_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/small_margin"
+                android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:maxLines="2"
+                android:paddingStart="@dimen/normal_margin"
+                android:paddingEnd="@dimen/normal_margin"
+                android:textSize="@dimen/dpad_contact_name_text_size"
+                android:textStyle="bold"
+                tools:text="John Doe" />
+
+            <!-- phone numbers first: OK calls the number, # sends it an SMS -->
+            <LinearLayout
+                style="@style/DpadDetailSection"
+                android:layout_marginTop="@dimen/normal_margin">
+
+                <ImageView
+                    android:id="@+id/contact_numbers_image"
+                    style="@style/DpadDetailSectionIcon"
+                    android:src="@drawable/ic_phone_vector"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/contact_numbers_holder"
+                    style="@style/DpadDetailSectionHolder" />
+            </LinearLayout>
+
+            <!-- actions, the original icon views are kept so the activity code keeps working -->
+            <LinearLayout
+                android:id="@+id/contact_actions_holder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- calling is done from the phone number rows, this row only keeps contact_start_call around -->
+                <LinearLayout
+                    android:id="@+id/dpad_row_call"
+                    style="@style/DpadDetailRow"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/contact_start_call"
+                        style="@style/DpadDetailRowIcon"
+                        android:contentDescription="@null"
+                        android:src="@drawable/ic_phone_vector" />
+
+                    <org.fossify.commons.views.MyTextView
+                        style="@style/DpadDetailRowText"
+                        android:text="@string/call_contact" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/dpad_row_sms"
+                    style="@style/DpadDetailRow">
+
+                    <ImageView
+                        android:id="@+id/contact_send_sms"
+                        style="@style/DpadDetailRowIcon"
+                        android:contentDescription="@null"
+                        android:src="@drawable/ic_sms_vector" />
+
+                    <org.fossify.commons.views.MyTextView
+                        style="@style/DpadDetailRowText"
+                        android:text="@string/send_sms" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/dpad_row_email"
+                    style="@style/DpadDetailRow">
+
+                    <ImageView
+                        android:id="@+id/contact_send_email"
+                        style="@style/DpadDetailRowIcon"
+                        android:contentDescription="@null"
+                        android:src="@drawable/ic_mail_vector" />
+
+                    <org.fossify.commons.views.MyTextView
+                        style="@style/DpadDetailRowText"
+                        android:text="@string/send_email" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/dpad_row_favorite"
+                    style="@style/DpadDetailRow">
+
+                    <ImageView
+                        android:id="@+id/contact_toggle_favorite"
+                        style="@style/DpadDetailRowIcon"
+                        android:contentDescription="@null"
+                        android:src="@drawable/ic_star_outline_vector" />
+
+                    <org.fossify.commons.views.MyTextView
+                        android:id="@+id/dpad_favorite_label"
+                        style="@style/DpadDetailRowText"
+                        android:text="@string/add_to_favorites" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/dpad_row_edit"
+                    style="@style/DpadDetailRow">
+
+                    <ImageView
+                        android:id="@+id/dpad_edit_icon"
+                        style="@style/DpadDetailRowIcon"
+                        android:contentDescription="@null"
+                        android:src="@drawable/ic_edit_vector" />
+
+                    <org.fossify.commons.views.MyTextView
+                        style="@style/DpadDetailRowText"
+                        android:text="@string/edit_contact" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/dpad_row_share"
+                    style="@style/DpadDetailRow">
+
+                    <ImageView
+                        android:id="@+id/dpad_share_icon"
+                        style="@style/DpadDetailRowIcon"
+                        android:contentDescription="@null"
+                        android:src="@drawable/ic_share_vector" />
+
+                    <org.fossify.commons.views.MyTextView
+                        style="@style/DpadDetailRowText"
+                        android:text="@string/share" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/dpad_row_delete"
+                    style="@style/DpadDetailRow">
+
+                    <ImageView
+                        android:id="@+id/dpad_delete_icon"
+                        style="@style/DpadDetailRowIcon"
+                        android:contentDescription="@null"
+                        android:src="@drawable/ic_delete_vector" />
+
+                    <org.fossify.commons.views.MyTextView
+                        style="@style/DpadDetailRowText"
+                        android:text="@string/delete" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginTop="@dimen/small_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_marginBottom="@dimen/small_margin"
+                android:background="#33808080" />
+
+            <!-- details, one section per row: icon on the left, values below each other -->
+            <LinearLayout
+                style="@style/DpadDetailSection"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/contact_name_image"
+                    style="@style/DpadDetailSectionIcon"
+                    android:src="@drawable/ic_person_vector" />
+
+                <org.fossify.commons.views.MyTextView
+                    android:id="@+id/contact_name"
+                    style="@style/DpadDetailSectionText" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/DpadDetailSection">
+
+                <ImageView
+                    android:id="@+id/contact_emails_image"
+                    style="@style/DpadDetailSectionIcon"
+                    android:src="@drawable/ic_mail_vector"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/contact_emails_holder"
+                    style="@style/DpadDetailSectionHolder" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/DpadDetailSection">
+
+                <ImageView
+                    android:id="@+id/contact_addresses_image"
+                    style="@style/DpadDetailSectionIcon"
+                    android:src="@drawable/ic_place_vector"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/contact_addresses_holder"
+                    style="@style/DpadDetailSectionHolder" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/DpadDetailSection">
+
+                <ImageView
+                    android:id="@+id/contact_ims_image"
+                    style="@style/DpadDetailSectionIcon"
+                    android:src="@drawable/ic_im"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/contact_ims_holder"
+                    style="@style/DpadDetailSectionHolder" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/DpadDetailSection">
+
+                <ImageView
+                    android:id="@+id/contact_events_image"
+                    style="@style/DpadDetailSectionIcon"
+                    android:src="@drawable/ic_cake_vector"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/contact_events_holder"
+                    style="@style/DpadDetailSectionHolder" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/DpadDetailSection">
+
+                <ImageView
+                    android:id="@+id/contact_notes_image"
+                    style="@style/DpadDetailSectionIcon"
+                    android:src="@drawable/ic_label_vector"
+                    android:visibility="gone" />
+
+                <org.fossify.commons.views.MyTextView
+                    android:id="@+id/contact_notes"
+                    style="@style/DpadDetailSectionText"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/DpadDetailSection">
+
+                <ImageView
+                    android:id="@+id/contact_ringtone_image"
+                    style="@style/DpadDetailSectionIcon"
+                    android:src="@drawable/ic_bell_vector"
+                    android:visibility="gone" />
+
+                <org.fossify.commons.views.MyTextView
+                    android:id="@+id/contact_ringtone"
+                    style="@style/DpadDetailSectionText"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/DpadDetailSection">
+
+                <ImageView
+                    android:id="@+id/contact_organization_image"
+                    style="@style/DpadDetailSectionIcon"
+                    android:src="@drawable/ic_business_vector"
+                    android:visibility="gone" />
+
+                <LinearLayout style="@style/DpadDetailSectionHolder">
+
+                    <org.fossify.commons.views.MyTextView
+                        android:id="@+id/contact_organization_company"
+                        style="@style/DpadDetailSectionText"
+                        android:visibility="gone" />
+
+                    <org.fossify.commons.views.MyTextView
+                        android:id="@+id/contact_organization_job_position"
+                        style="@style/DpadDetailSectionText"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout style="@style/DpadDetailSection">
+
+                <ImageView
+                    android:id="@+id/contact_websites_image"
+                    style="@style/DpadDetailSectionIcon"
+                    android:src="@drawable/ic_link_vector"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/contact_websites_holder"
+                    style="@style/DpadDetailSectionHolder" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/DpadDetailSection">
+
+                <ImageView
+                    android:id="@+id/contact_groups_image"
+                    style="@style/DpadDetailSectionIcon"
+                    android:src="@drawable/ic_people_vector"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/contact_groups_holder"
+                    style="@style/DpadDetailSectionHolder" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/DpadDetailSection">
+
+                <ImageView
+                    android:id="@+id/contact_source_image"
+                    style="@style/DpadDetailSectionIcon"
+                    android:src="@drawable/ic_account_box_vector"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/contact_sources_holder"
+                    style="@style/DpadDetailSectionHolder" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/contact_photo_big"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0"
+        android:background="#BB000000"
+        android:clickable="true"
+        android:padding="@dimen/activity_margin"
+        android:scaleType="fitCenter"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/contact_photo_top_shadow"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@null"
+        android:visibility="gone" />
+
+    <!-- hidden, its menu items are reused by the action rows and the Menu key -->
+    <org.fossify.commons.views.MyAppBarLayout
+        android:id="@+id/contact_appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/contact_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:menu="@menu/menu_view_contact" />
+
+    </org.fossify.commons.views.MyAppBarLayout>
+</RelativeLayout>

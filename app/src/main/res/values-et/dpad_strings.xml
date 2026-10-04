@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dpad_add_field">Lisa väli</string>
+    <string name="dpad_sort">Sorteeri</string>
+    <string name="dpad_dialer">Telefon</string>
+    <string name="dpad_pick_color">Värv</string>
+    <string name="dpad_pick_shade">Toon</string>
+    <string name="dpad_jump_to_letter">Hüppa tähele</string>
+    <string name="dpad_touch_input">Luba puutesisend</string>
+</resources>

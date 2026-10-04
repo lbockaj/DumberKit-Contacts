@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dpad_add_field">Cuir réimse leis</string>
+    <string name="dpad_sort">Sórtáil</string>
+    <string name="dpad_dialer">Fón</string>
+    <string name="dpad_pick_color">Dath</string>
+    <string name="dpad_pick_shade">Scáth</string>
+    <string name="dpad_jump_to_letter">Léim go litir</string>
+    <string name="dpad_touch_input">Ceadaigh ionchur tadhaill</string>
+</resources>

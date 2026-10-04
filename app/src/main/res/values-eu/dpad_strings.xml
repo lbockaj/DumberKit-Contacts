@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dpad_add_field">Gehitu eremua</string>
+    <string name="dpad_sort">Ordenatu</string>
+    <string name="dpad_dialer">Telefonoa</string>
+    <string name="dpad_pick_color">Kolorea</string>
+    <string name="dpad_pick_shade">Ñabardura</string>
+    <string name="dpad_jump_to_letter">Joan letrara</string>
+    <string name="dpad_touch_input">Baimendu ukipen bidezko sarrera</string>
+</resources>

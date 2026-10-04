@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/select_contact_holder"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!-- keypad phones: Save (green check) and Cancel (red cross) on the right, right arrow from any row jumps there -->
+    <LinearLayout
+        android:id="@+id/select_contact_actions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/small_margin"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/select_contact_save"
+            android:layout_width="@dimen/dpad_side_action_size"
+            android:layout_height="@dimen/dpad_side_action_size"
+            android:contentDescription="@string/save"
+            android:focusable="true"
+            android:nextFocusUp="@+id/select_contact_cancel"
+            android:nextFocusDown="@+id/select_contact_cancel"
+            android:padding="@dimen/dpad_side_action_padding"
+            android:src="@drawable/ic_check_vector" />
+
+        <ImageView
+            android:id="@+id/select_contact_cancel"
+            android:layout_width="@dimen/dpad_side_action_size"
+            android:layout_height="@dimen/dpad_side_action_size"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:contentDescription="@string/cancel"
+            android:focusable="true"
+            android:nextFocusUp="@+id/select_contact_save"
+            android:nextFocusDown="@+id/select_contact_save"
+            android:padding="@dimen/dpad_side_action_padding"
+            android:src="@drawable/ic_cross_vector" />
+    </LinearLayout>
+
+    <org.fossify.commons.views.MyRecyclerView
+        android:id="@+id/select_contact_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@+id/select_contact_actions"
+        android:clipToPadding="false"
+        android:layoutAnimation="@anim/layout_animation"
+        android:scrollbars="none"
+        app:layoutManager="org.fossify.commons.views.MyLinearLayoutManager" />
+
+    <org.fossify.commons.views.MyTextView
+        android:id="@+id/select_contact_placeholder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/small_margin"
+        android:alpha="0.8"
+        android:gravity="center"
+        android:paddingStart="@dimen/activity_margin"
+        android:paddingTop="@dimen/activity_margin"
+        android:paddingEnd="@dimen/activity_margin"
+        android:text="@string/no_contacts_found"
+        android:textSize="@dimen/bigger_text_size"
+        android:textStyle="italic"
+        android:visibility="gone" />
+
+    <com.reddit.indicatorfastscroll.FastScrollerView
+        android:id="@+id/letter_fastscroller"
+        android:layout_width="32dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:paddingTop="@dimen/big_margin"
+        android:paddingBottom="@dimen/big_margin" />
+
+    <com.reddit.indicatorfastscroll.FastScrollerThumbView
+        android:id="@+id/letter_fastscroller_thumb"
+        android:layout_width="@dimen/fab_size"
+        android:layout_height="match_parent"
+        android:layout_alignTop="@+id/letter_fastscroller"
+        android:layout_alignBottom="@+id/letter_fastscroller"
+        android:layout_marginEnd="@dimen/activity_margin"
+        android:layout_toStartOf="@+id/letter_fastscroller" />
+
+</RelativeLayout>

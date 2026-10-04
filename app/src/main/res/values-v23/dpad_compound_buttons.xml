@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+      Overrides Material's checkbox / radio button styles (same names; Material defines them in values-v23, so they
+      must be overridden here too). No circular ripple behind the box (it drew a second, round highlight sticking out of
+      the focus frame); a clear focus frame instead, and they are the default focus, so a dialog with options opens on
+      the first option instead of on Cancel.
+    -->
+    <style name="Widget.Material3.CompoundButton.CheckBox" parent="Base.Widget.Material3.CompoundButton.CheckBox">
+        <item name="android:background">@null</item>
+        <item name="android:foreground">@drawable/dpad_focus_frame</item>
+        <item name="android:focusedByDefault">true</item>
+    </style>
+
+    <style name="Widget.Material3.CompoundButton.RadioButton" parent="Base.Widget.Material3.CompoundButton.RadioButton">
+        <item name="android:background">@null</item>
+        <item name="android:foreground">@drawable/dpad_focus_frame</item>
+        <item name="android:focusedByDefault">true</item>
+    </style>
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dpad_add_field">Pievienot lauku</string>
+    <string name="dpad_sort">Kārtot</string>
+    <string name="dpad_dialer">Tālrunis</string>
+    <string name="dpad_pick_color">Krāsa</string>
+    <string name="dpad_pick_shade">Tonis</string>
+    <string name="dpad_jump_to_letter">Pāriet uz burtu</string>
+    <string name="dpad_touch_input">Atļaut skārienievadi</string>
+</resources>

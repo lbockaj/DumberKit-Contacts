@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dpad_add_field">Pridėti lauką</string>
+    <string name="dpad_sort">Rikiuoti</string>
+    <string name="dpad_dialer">Telefonas</string>
+    <string name="dpad_pick_color">Spalva</string>
+    <string name="dpad_pick_shade">Atspalvis</string>
+    <string name="dpad_jump_to_letter">Pereiti prie raidės</string>
+    <string name="dpad_touch_input">Leisti valdyti lietimu</string>
+</resources>

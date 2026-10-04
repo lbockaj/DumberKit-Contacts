@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dpad_add_field">Додај поле</string>
+    <string name="dpad_sort">Подреди</string>
+    <string name="dpad_dialer">Телефон</string>
+    <string name="dpad_pick_color">Боја</string>
+    <string name="dpad_pick_shade">Нијанса</string>
+    <string name="dpad_jump_to_letter">Оди на буква</string>
+    <string name="dpad_touch_input">Дозволи внес со допир</string>
+</resources>

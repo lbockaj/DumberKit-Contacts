@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dpad_add_field">ਖੇਤਰ ਜੋੜੋ</string>
+    <string name="dpad_sort">ਛਾਂਟੋ</string>
+    <string name="dpad_dialer">ਫ਼ੋਨ</string>
+    <string name="dpad_pick_color">ਰੰਗ</string>
+    <string name="dpad_pick_shade">ਸ਼ੇਡ</string>
+    <string name="dpad_jump_to_letter">ਅੱਖਰ ਤੇ ਜਾਓ</string>
+    <string name="dpad_touch_input">ਟੱਚ ਇਨਪੁੱਟ ਦੀ ਆਗਿਆ ਦਿਓ</string>
+</resources>

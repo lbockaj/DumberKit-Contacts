@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dpad_add_field">Add field</string>
+    <string name="dpad_sort">Sort</string>
+    <string name="dpad_dialer">Dialer</string>
+    <string name="dpad_pick_color">Color</string>
+    <string name="dpad_pick_shade">Shade</string>
+    <!-- About screen -->
+    <string name="dpad_about_app_name" translatable="false">DumberKit Contacts</string>
+    <string name="dpad_about_version">Version %s</string>
+    <string name="dpad_about_description">A contacts app for keypad phones like the Qin F21, Dumber Mini or Doov R77 Pro. Everything works with the D-pad and the keypad, no touchscreen needed.</string>
+    <string name="dpad_about_shortcuts">Keypad shortcuts</string>
+    <string name="dpad_key_ok">OK</string>
+    <string name="dpad_key_ok_action">Open the contact</string>
+    <string name="dpad_key_ok_hold">Hold OK</string>
+    <string name="dpad_key_ok_hold_action">Contact actions: SMS, favorite, edit, share, delete</string>
+    <string name="dpad_key_call">Call</string>
+    <string name="dpad_key_call_action">Call the contact, or the selected number</string>
+    <string name="dpad_key_pound">#</string>
+    <string name="dpad_key_pound_action">Send an SMS</string>
+    <string name="dpad_key_left_right">← →</string>
+    <string name="dpad_key_left_right_action">Switch between contacts, favorites and groups</string>
+    <string name="dpad_key_menu">Menu</string>
+    <string name="dpad_key_menu_action">New contact, sort, filter, settings</string>
+    <string name="dpad_key_back">Back</string>
+    <string name="dpad_key_back_action">Jump to the first contact, then leave the app</string>
+    <string name="dpad_about_license_title">License</string>
+    <string name="dpad_about_license">Free and open source software under the GNU General Public License v3.0. No ads, no tracking, the app sends your contacts nowhere.</string>
+    <!-- Commons' icon color warning suggests Google Play and the green icon, this app's default icon is red -->
+    <string name="app_icon_color_warning">Caution: certain launchers may not handle app icon customization correctly. If the icon disappears, open the app from the list of all apps or a shortcut, then restore the default red icon color. In extreme cases, reinstalling the app may be necessary.</string>
+    <string name="dpad_jump_to_letter">Jump to letter</string>
+    <string name="dpad_key_star">*</string>
+    <string name="dpad_key_star_action">Jump to a letter (also the Ab button)</string>
+    <string name="dpad_touch_input">Allow touch input</string>
+</resources>

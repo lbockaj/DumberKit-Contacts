@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dpad_add_field">Ychwanegu maes</string>
+    <string name="dpad_sort">Trefnu</string>
+    <string name="dpad_dialer">Ffôn</string>
+    <string name="dpad_pick_color">Lliw</string>
+    <string name="dpad_pick_shade">Arlliw</string>
+    <string name="dpad_jump_to_letter">Neidio i lythyren</string>
+    <string name="dpad_touch_input">Caniatáu mewnbwn cyffwrdd</string>
+</resources>

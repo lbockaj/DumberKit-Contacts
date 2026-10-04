@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dpad_add_field">Pridať pole</string>
+    <string name="dpad_sort">Zoradiť</string>
+    <string name="dpad_dialer">Telefón</string>
+    <!-- Slovak translations missing in Commons (color customization, fonts) -->
+    <string name="font">Písmo</string>
+    <string name="app_font">Písmo aplikácie</string>
+    <string name="font_monospace">Neproporcionálne</string>
+    <string name="select_font_file">Vybrať súbor s písmom…</string>
+    <string name="invalid_font_file">Neplatný súbor s písmom</string>
+    <string name="dpad_pick_color">Farba</string>
+    <string name="dpad_pick_shade">Odtieň</string>
+    <!-- About screen -->
+    <string name="dpad_about_version">Verzia %s</string>
+    <string name="dpad_about_description">Kontakty pre klávesnicové telefóny ako Qin F21, Dumber Mini alebo Doov R77 Pro. Všetko sa ovláda D-padom a klávesnicou, dotykovú obrazovku netreba.</string>
+    <string name="dpad_about_shortcuts">Skratky klávesnice</string>
+    <string name="dpad_key_ok">OK</string>
+    <string name="dpad_key_ok_action">Otvoriť kontakt</string>
+    <string name="dpad_key_ok_hold">Podržať OK</string>
+    <string name="dpad_key_ok_hold_action">Akcie kontaktu: SMS, obľúbené, upraviť, zdieľať, vymazať</string>
+    <string name="dpad_key_call">Volať</string>
+    <string name="dpad_key_call_action">Zavolať kontaktu alebo vybranému číslu</string>
+    <string name="dpad_key_pound">#</string>
+    <string name="dpad_key_pound_action">Poslať SMS</string>
+    <string name="dpad_key_left_right">← →</string>
+    <string name="dpad_key_left_right_action">Prepínať kontakty, obľúbené a skupiny</string>
+    <string name="dpad_key_menu">Menu</string>
+    <string name="dpad_key_menu_action">Nový kontakt, zoradiť, filter, nastavenia</string>
+    <string name="dpad_key_back">Späť</string>
+    <string name="dpad_key_back_action">Skočiť na prvý kontakt, potom opustiť aplikáciu</string>
+    <string name="dpad_about_license_title">Licencia</string>
+    <string name="dpad_about_license">Slobodný softvér s otvoreným kódom pod licenciou GNU General Public License v3.0. Bez reklám a sledovania, aplikácia nikam neposiela tvoje kontakty.</string>
+    <string name="app_icon_color_warning">Upozornenie: v niektorých spúšťačoch môže zmena ikony spôsobiť problémy. Ak by ikona zmizla, otvorte aplikáciu zo zoznamu všetkých aplikácií alebo cez odkaz a vráťte pôvodnú červenú farbu ikony. V krajnom prípade môže byť potrebné aplikáciu preinštalovať.</string>
+    <string name="dpad_jump_to_letter">Prejsť na písmeno</string>
+    <string name="dpad_key_star">*</string>
+    <string name="dpad_key_star_action">Prejsť na písmeno (aj tlačidlo Ab)</string>
+    <string name="dpad_touch_input">Povoliť dotykové ovládanie</string>
+</resources>

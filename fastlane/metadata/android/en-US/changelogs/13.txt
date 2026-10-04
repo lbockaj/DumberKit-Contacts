@@ -1,0 +1,5 @@
+• Groups work with the keypad: Menu adds contacts, sends an SMS or e-mail to the group, sets its ringtone
+• Hold OK on a group to rename or delete it
+• Picking contacts: green check and red cross on the right, → jumps to them
+• New address book icon, color selectable
+• Fixed: letter grid opened with * on Android 9, a new first group not showing up

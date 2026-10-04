@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dpad_add_field">Veld toevoegen</string>
+    <string name="dpad_sort">Sorteren</string>
+    <string name="dpad_dialer">Telefoon</string>
+    <string name="dpad_pick_color">Kleur</string>
+    <string name="dpad_pick_shade">Tint</string>
+    <string name="dpad_jump_to_letter">Naar letter springen</string>
+    <string name="dpad_touch_input">Aanraakbediening toestaan</string>
+</resources>

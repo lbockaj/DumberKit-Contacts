@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dpad_add_field">ক্ষেত্র যোগ করুন</string>
+    <string name="dpad_sort">সাজান</string>
+    <string name="dpad_dialer">ফোন</string>
+    <string name="dpad_pick_color">রং</string>
+    <string name="dpad_pick_shade">শেড</string>
+    <string name="dpad_jump_to_letter">অক্ষরে যান</string>
+    <string name="dpad_touch_input">স্পর্শ ইনপুট চালু করুন</string>
+</resources>

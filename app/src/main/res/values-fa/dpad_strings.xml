@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dpad_add_field">افزودن فیلد</string>
+    <string name="dpad_sort">مرتب‌سازی</string>
+    <string name="dpad_dialer">تلفن</string>
+    <string name="dpad_pick_color">رنگ</string>
+    <string name="dpad_pick_shade">سایه</string>
+    <string name="dpad_jump_to_letter">رفتن به حرف</string>
+    <string name="dpad_touch_input">اجازه ورودی لمسی</string>
+</resources>

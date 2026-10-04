@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dpad_add_field">Tambah kolom</string>
+    <string name="dpad_sort">Urutkan</string>
+    <string name="dpad_dialer">Telepon</string>
+    <string name="dpad_pick_color">Warna</string>
+    <string name="dpad_pick_shade">Corak</string>
+    <string name="dpad_jump_to_letter">Lompat ke huruf</string>
+    <string name="dpad_touch_input">Izinkan input sentuh</string>
+</resources>

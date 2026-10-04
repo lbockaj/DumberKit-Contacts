@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dpad_add_field">فیلڈ شامل کریں</string>
+    <string name="dpad_sort">ترتیب دیں</string>
+    <string name="dpad_dialer">فون</string>
+    <string name="dpad_pick_color">رنگ</string>
+    <string name="dpad_pick_shade">شیڈ</string>
+    <string name="dpad_jump_to_letter">حرف پر جائیں</string>
+    <string name="dpad_touch_input">ٹچ ان پٹ کی اجازت دیں</string>
+</resources>

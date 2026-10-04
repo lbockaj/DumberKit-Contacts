@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dpad_add_field">Dodaj polje</string>
+    <string name="dpad_sort">Sortiraj</string>
+    <string name="dpad_dialer">Telefon</string>
+    <string name="dpad_pick_color">Boja</string>
+    <string name="dpad_pick_shade">Nijansa</string>
+    <string name="dpad_jump_to_letter">Idi na slovo</string>
+    <string name="dpad_touch_input">Dozvoli unos dodirom</string>
+</resources>

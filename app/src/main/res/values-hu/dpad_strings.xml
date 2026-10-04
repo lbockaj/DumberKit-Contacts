@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dpad_add_field">Mező hozzáadása</string>
+    <string name="dpad_sort">Rendezés</string>
+    <string name="dpad_dialer">Telefon</string>
+    <string name="dpad_pick_color">Szín</string>
+    <string name="dpad_pick_shade">Árnyalat</string>
+    <string name="dpad_jump_to_letter">Ugrás betűre</string>
+    <string name="dpad_touch_input">Érintéses vezérlés engedélyezése</string>
+</resources>

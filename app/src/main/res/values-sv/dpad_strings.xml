@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dpad_add_field">Lägg till fält</string>
+    <string name="dpad_sort">Sortera</string>
+    <string name="dpad_dialer">Telefon</string>
+    <string name="dpad_pick_color">Färg</string>
+    <string name="dpad_pick_shade">Nyans</string>
+    <string name="dpad_jump_to_letter">Gå till bokstav</string>
+    <string name="dpad_touch_input">Tillåt pekinmatning</string>
+</resources>
