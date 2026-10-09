@@ -1,0 +1,1 @@
+• Switching tabs is smooth: the list starts at the top without jumping, no focus flash on the top bar

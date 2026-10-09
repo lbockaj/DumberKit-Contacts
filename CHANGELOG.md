@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.8.2] - 2026-10-09
+### Fixed
+- Switching tabs no longer jumps around: the list is already at the top when shown and the focus doesn't flash on the top bar
+
 ## [0.8.1] - 2026-10-09
 ### Changed
 - Phone numbers are shown under the names by default on a fresh install

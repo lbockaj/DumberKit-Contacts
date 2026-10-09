@@ -489,9 +489,21 @@ class MainActivity : SimpleActivity(), RefreshContactsListener {
             return true
         }
 
-        binding.viewPager.setCurrentItem(target, false)
-        // each tab starts on its first item, not where it was left
-        binding.root.post {
+        // the focused row of the tab being left can't keep the focus, it would land on the top bar ("Ab" flashes);
+        // the pager itself holds it until the new tab is shown
+        val pager = binding.viewPager
+        val wasFocusable = pager.isFocusable
+        pager.isFocusable = true
+        pager.descendantFocusability = ViewGroup.FOCUS_BLOCK_DESCENDANTS
+        pager.requestFocus()
+
+        // each tab starts on its first item, not where it was left: scroll it up while it's still out of sight, so
+        // it doesn't jump around once shown
+        getFragmentAt(target)?.getListView()?.scrollToPosition(0)
+        pager.setCurrentItem(target, false)
+        pager.post {
+            pager.descendantFocusability = ViewGroup.FOCUS_AFTER_DESCENDANTS
+            pager.isFocusable = wasFocusable
             if (!focusCurrentList(0)) {
                 focusTopBar()
             }
@@ -693,7 +705,9 @@ class MainActivity : SimpleActivity(), RefreshContactsListener {
             .build()
     }
 
-    private fun getCurrentFragment(): MyViewPagerFragment<*>? {
+    private fun getCurrentFragment(): MyViewPagerFragment<*>? = getFragmentAt(binding.viewPager.currentItem)
+
+    private fun getFragmentAt(index: Int): MyViewPagerFragment<*>? {
         val showTabs = config.showTabs
         val fragments = arrayListOf<MyViewPagerFragment<*>>()
         if (showTabs and TAB_CONTACTS != 0) {
@@ -708,7 +722,7 @@ class MainActivity : SimpleActivity(), RefreshContactsListener {
             fragments.add(findViewById(R.id.groups_fragment))
         }
 
-        return fragments.getOrNull(binding.viewPager.currentItem)
+        return fragments.getOrNull(index)
     }
 
     private fun setupTabColors() {
