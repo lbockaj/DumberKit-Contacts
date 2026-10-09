@@ -26,6 +26,7 @@ import org.fossify.commons.helpers.SIDELOADING_FALSE
 import org.fossify.commons.activities.CustomizationActivity
 import org.fossify.contacts.helpers.applyDpadFocusHighlight
 import org.fossify.contacts.helpers.ignoreTouches
+import org.fossify.contacts.helpers.keepIconColorWithThemes
 
 private const val ICON_ALIASES_MIGRATED = "dumberkit_red_icon_v3"
 
@@ -51,7 +52,13 @@ class App : FossifyApp() {
                 }
             }
 
-            override fun onActivityCreated(activity: Activity, savedInstanceState: Bundle?) {}
+            override fun onActivityCreated(activity: Activity, savedInstanceState: Bundle?) {
+                // runs inside the screen's own onCreate, before it sets up its themes
+                if (activity is CustomizationActivity) {
+                    activity.keepIconColorWithThemes()
+                }
+            }
+
             override fun onActivityStarted(activity: Activity) {}
             override fun onActivityPaused(activity: Activity) {}
             override fun onActivityStopped(activity: Activity) {}

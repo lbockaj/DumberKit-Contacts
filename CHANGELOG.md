@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.8.4] - 2026-10-09
+### Fixed
+- Picking a theme (light, dark, white…) no longer turns the app icon green, the icon keeps its color; the theme is still recognized afterwards instead of showing as Custom
+
 ## [0.8.3] - 2026-10-09
 ### Changed
 - Smaller app (APK 6.4 → 5.0 MB): Commons' own About, license, FAQ, contributors, donation and blocked numbers screens, never opened here, are left out
