@@ -226,13 +226,25 @@
             </intent-filter>
         </activity>
 
+        <!-- Commons' own screens, never opened here (the app has its own About): left out to keep the app smaller -->
         <activity
-            android:screenOrientation="portrait"
             android:name="org.fossify.commons.activities.AboutActivity"
-            android:configChanges="orientation"
-            android:exported="false"
-            android:label="@string/about"
-            android:parentActivityName=".activities.MainActivity" />
+            tools:node="remove" />
+        <activity
+            android:name="org.fossify.commons.activities.LicenseActivity"
+            tools:node="remove" />
+        <activity
+            android:name="org.fossify.commons.activities.FAQActivity"
+            tools:node="remove" />
+        <activity
+            android:name="org.fossify.commons.activities.ContributorsActivity"
+            tools:node="remove" />
+        <activity
+            android:name="org.fossify.commons.activities.DonationActivity"
+            tools:node="remove" />
+        <activity
+            android:name="org.fossify.commons.activities.ManageBlockedNumbersActivity"
+            tools:node="remove" />
 
         <activity
             android:screenOrientation="portrait"

@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.8.3] - 2026-10-09
+### Changed
+- Smaller app (APK 6.4 → 5.0 MB): Commons' own About, license, FAQ, contributors, donation and blocked numbers screens, never opened here, are left out
+
 ## [0.8.2] - 2026-10-09
 ### Fixed
 - Switching tabs no longer jumps around: the list is already at the top when shown and the focus doesn't flash on the top bar
