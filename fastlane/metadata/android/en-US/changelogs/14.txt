@@ -1,0 +1,2 @@
+• Phone numbers are shown under the names by default
+• Switching tabs with ← / → always starts on the first contact

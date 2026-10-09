@@ -490,8 +490,9 @@ class MainActivity : SimpleActivity(), RefreshContactsListener {
         }
 
         binding.viewPager.setCurrentItem(target, false)
+        // each tab starts on its first item, not where it was left
         binding.root.post {
-            if (!focusCurrentList()) {
+            if (!focusCurrentList(0)) {
                 focusTopBar()
             }
         }

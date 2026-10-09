@@ -21,6 +21,7 @@ import org.fossify.commons.extensions.baseConfig
 import org.fossify.commons.extensions.checkAppIconColor
 import org.fossify.commons.helpers.IS_SYSTEM_THEME_ENABLED
 import org.fossify.commons.helpers.PREFS_KEY
+import org.fossify.commons.helpers.SHOW_PHONE_NUMBERS
 import org.fossify.commons.helpers.SIDELOADING_FALSE
 import org.fossify.commons.activities.CustomizationActivity
 import org.fossify.contacts.helpers.applyDpadFocusHighlight
@@ -33,6 +34,7 @@ class App : FossifyApp() {
         super.onCreate()
         useRedIconByDefault()
         useSystemThemeByDefault()
+        showPhoneNumbersByDefault()
         // Commons calls any build without one of its unused images (removed by the release shrinker) a "fake version"
         // and sends people to its website; this app is built from its own source on purpose
         baseConfig.appSideloadingStatus = SIDELOADING_FALSE
@@ -89,6 +91,14 @@ class App : FossifyApp() {
         val prefs = getSharedPreferences(PREFS_KEY, MODE_PRIVATE)
         if (!prefs.contains(IS_SYSTEM_THEME_ENABLED)) {
             baseConfig.isSystemThemeEnabled = true
+        }
+    }
+
+    /** The list shows the phone numbers under the names unless turned off in the settings. */
+    private fun showPhoneNumbersByDefault() {
+        val prefs = getSharedPreferences(PREFS_KEY, MODE_PRIVATE)
+        if (!prefs.contains(SHOW_PHONE_NUMBERS)) {
+            baseConfig.showPhoneNumbers = true
         }
     }
 

@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.8.1] - 2026-10-09
+### Changed
+- Phone numbers are shown under the names by default on a fresh install
+### Fixed
+- Switching back to a tab with ← / → put the focus where the list was left, now it starts on the first contact
+
 ## [0.8.0] - 2026-10-04
 ### Added
 - Groups work with the keypad: a group's screen has no floating button, Menu offers Add contacts, Send SMS / e-mail to the group and Ringtone, Call and # work on its contacts, holding OK offers Remove from group
