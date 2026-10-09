@@ -127,7 +127,7 @@ the colors, end with **Cancel** / **Save** rows instead of icons in the top bar.
 - Import and export vCard (.vcf) files through Android's own file picker, plus automatic backups.
 - No ads, no tracking and no internet access. Your contacts stay in Android's own contact storage – on the phone,
   the SIM or your sync account – and other apps keep seeing them as usual.
-- Portrait only, sized for small screens, and translated into 70+ languages.
+- Portrait only, sized for small screens, and translated into over 40 languages.
 
 ## Install
 

@@ -1,0 +1,4 @@
+First public release.
+• Every screen, menu and dialog works with the D-pad and the keypad
+• Search, jump to a letter, favorites and groups with keypad menus
+• Translated into over 40 languages

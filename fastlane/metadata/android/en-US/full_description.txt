@@ -18,3 +18,4 @@ A contacts app for keypad phones like the Qin F21, Dumber Mini or Doov R77 Pro. 
 • System, light, dark and custom themes, a keypad-friendly color picker, red or any other icon color
 • vCard import and export, automatic backups
 • No ads, no tracking, no internet access
+• Translated into over 40 languages

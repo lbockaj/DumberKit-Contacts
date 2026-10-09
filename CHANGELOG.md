@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.0] - 2026-10-09
+First public release.
+### Changed
+- The language list offers only languages with a real translation (over 40); the others showed up in English anyway
+- Smaller app: 4.4 MB
+- README with a full guide to the keys
+
 ## [0.8.4] - 2026-10-09
 ### Fixed
 - Picking a theme (light, dark, white…) no longer turns the app icon green, the icon keeps its color; the theme is still recognized afterwards instead of showing as Custom

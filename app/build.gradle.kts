@@ -107,6 +107,14 @@ android {
     androidResources {
         @Suppress("UnstableApiUsage")
         generateLocaleConfig = true
+        // only languages with a real translation (at least ~10 % of the texts), so the language list in the settings
+        // doesn't offer ones that would show up in English anyway; regional variants fall back to the main language
+        localeFilters += listOf(
+            "en", "en-rGB", "ar", "az", "be", "bg", "bs", "ca", "cs", "cy", "da", "de", "el", "eo", "es", "et", "eu",
+            "fa", "fi", "fr", "ga", "gl", "hi-rIN", "hr", "hu", "ia", "in", "it", "iw", "ja", "kab", "ko-rKR", "lt",
+            "nb-rNO", "nl", "oc", "pa-rPK", "pl", "pt", "pt-rBR", "pt-rPT", "ro", "ru", "sk", "sl", "sr", "sv", "ta",
+            "tr", "uk", "vi", "zh-rCN", "zh-rHK", "zh-rTW"
+        )
     }
 
     tasks.withType<KotlinCompile> {
