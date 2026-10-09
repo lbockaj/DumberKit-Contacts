@@ -1,20 +1,20 @@
-A contacts app made for keypad phones like the Qin F21, Dumber Mini or Doov R77 Pro. Every screen, menu and dialog works with the D-pad and the keypad alone, no touchscreen needed.
+A contacts app for keypad phones like the Qin F21, Dumber Mini or Doov R77 Pro. Every screen, menu and dialog works with the D-pad and the keypad alone, on a screen as small as 480×640. Touch is switched off inside the app, so nothing gets pressed by accident in your pocket.
 
-<b>Keypad shortcuts</b>
-• OK – open the contact
-• Hold OK – send SMS, favorite, edit, share, delete
+<b>Keys</b>
+• OK – open the contact, or pick the selected item
+• Hold OK – what you can do with the contact: SMS, favorite, edit, share, delete
 • Call – call the contact or the selected number
 • # – send an SMS
-• * – jump to a letter
-• ← / → – contacts, favorites, groups
-• Menu – sort, filter, settings
-• Back – jump to the first contact, then leave
+• * or Ab – jump to a letter in an A–Z grid, also with the digit keys
+• ← / → – switch between Contacts, Favorites and Groups
+• Menu – what you can do on the current screen
+• Back – go back; on the list it first jumps to the first contact
 
 <b>Features</b>
-• Compact layout for 480×640 screens, portrait only
-• Contact details with the numbers on top and actions as rows
-• Edit form navigated field by field, Cancel / Save rows at the end
-• Date picker usable with arrows and digits
-• System, light, dark and custom themes, keypad-friendly color picker
+• Search from the magnifier, ready for typing with Traditional T9
+• Contact details with the numbers on top and the actions as rows
+• Edit form walked through field by field, Cancel / Save rows at the end, dates typed with the digit keys
+• Favorites and groups with their own keypad menus: add members, SMS or e-mail the whole group, ringtone
+• System, light, dark and custom themes, a keypad-friendly color picker, red or any other icon color
 • vCard import and export, automatic backups
 • No ads, no tracking, no internet access
