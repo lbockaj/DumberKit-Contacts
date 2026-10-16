@@ -40,6 +40,9 @@ class App : FossifyApp() {
         // Commons calls any build without one of its unused images (removed by the release shrinker) a "fake version"
         // and sends people to its website; this app is built from its own source on purpose
         baseConfig.appSideloadingStatus = SIDELOADING_FALSE
+        // Commons warns about launchers losing a recolored icon (restore the "default red", reinstall from Google
+        // Play) the first time the theme or icon color is picked; neither fits here, and it hid the theme list behind it
+        baseConfig.wasAppIconCustomizationWarningShown = true
         registerActivityLifecycleCallbacks(object : ActivityLifecycleCallbacks {
             override fun onActivityResumed(activity: Activity) {
                 // keys only: touches are ignored in every screen of the app
