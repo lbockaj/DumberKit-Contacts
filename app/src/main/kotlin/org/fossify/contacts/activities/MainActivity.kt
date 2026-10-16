@@ -114,9 +114,10 @@ class MainActivity : SimpleActivity(), RefreshContactsListener {
         appLaunched(BuildConfig.APPLICATION_ID)
         setupToolbar()
         keepFocusInList()
+        // a margin, not padding: the tabs have a fixed height, padding squeezed them under the navigation bar
         setupEdgeToEdge(
             padTopSystem = listOf(binding.mainTopBar),
-            padBottomImeAndSystem = listOf(binding.mainTabsHolder),
+            moveBottomSystem = listOf(binding.mainTabsHolder),
         )
         storeStateVariables()
         setupTabs()
@@ -355,6 +356,12 @@ class MainActivity : SimpleActivity(), RefreshContactsListener {
         binding.root.viewTreeObserver.addOnGlobalFocusChangeListener { _, newFocus ->
             val list = getCurrentFragment()?.getListView() ?: return@addOnGlobalFocusChangeListener
             val item = newFocus?.let { list.findContainingItemView(it) }
+            // back to normal once a row or the top bar has the focus again (see holdFocusInEmptyTab)
+            if (newFocus != null && newFocus != binding.viewPager && pagerFocusableBeforeHold != null) {
+                binding.viewPager.descendantFocusability = ViewGroup.FOCUS_AFTER_DESCENDANTS
+                binding.viewPager.isFocusable = pagerFocusableBeforeHold == true
+                pagerFocusableBeforeHold = null
+            }
             when {
                 item != null -> lastListPosition = list.getChildAdapterPosition(item)
                 allowLeavingList || newFocus == null || newFocus.isInside(binding.viewPager) -> lastListPosition = -1
@@ -471,6 +478,23 @@ class MainActivity : SimpleActivity(), RefreshContactsListener {
         return getCurrentFragment()?.focusContent(position) == true
     }
 
+    /**
+     * An empty tab (no favorites, no groups) has nothing to focus: the pager holds the focus, without a frame, so
+     * ← / → still switch the tabs and ↑ goes to the top bar. On the top bar the arrows would only move between its
+     * buttons.
+     */
+    private var pagerFocusableBeforeHold: Boolean? = null
+
+    private fun holdFocusInEmptyTab() {
+        if (pagerFocusableBeforeHold == null) {
+            pagerFocusableBeforeHold = binding.viewPager.isFocusable
+        }
+        binding.viewPager.isFocusable = true
+        binding.viewPager.defaultFocusHighlightEnabled = false
+        binding.viewPager.descendantFocusability = ViewGroup.FOCUS_BEFORE_DESCENDANTS
+        binding.viewPager.requestFocus()
+    }
+
     private fun focusTopBar() = moveFocusOutOfList {
         if (isSearchOpen) {
             binding.mainSearchInput.requestFocus()
@@ -505,7 +529,7 @@ class MainActivity : SimpleActivity(), RefreshContactsListener {
             pager.descendantFocusability = ViewGroup.FOCUS_AFTER_DESCENDANTS
             pager.isFocusable = wasFocusable
             if (!focusCurrentList(0)) {
-                focusTopBar()
+                holdFocusInEmptyTab()
             }
         }
         return true
@@ -603,7 +627,15 @@ class MainActivity : SimpleActivity(), RefreshContactsListener {
 
             KeyEvent.KEYCODE_DPAD_DOWN -> {
                 if (inTopBar) {
-                    focusCurrentList()
+                    if (!focusCurrentList()) {
+                        holdFocusInEmptyTab()
+                    }
+                    return true
+                }
+
+                // the empty tab got its first contact meanwhile
+                if (focused == binding.viewPager) {
+                    focusCurrentList(0)
                     return true
                 }
                 return false

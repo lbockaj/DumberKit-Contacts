@@ -27,6 +27,7 @@ import org.fossify.commons.activities.CustomizationActivity
 import org.fossify.contacts.helpers.applyDpadFocusHighlight
 import org.fossify.contacts.helpers.ignoreTouches
 import org.fossify.contacts.helpers.keepIconColorWithThemes
+import org.fossify.contacts.helpers.removeModdedAppWarning
 
 private const val ICON_ALIASES_MIGRATED = "dumberkit_red_icon_v3"
 
@@ -59,7 +60,10 @@ class App : FossifyApp() {
                 }
             }
 
-            override fun onActivityStarted(activity: Activity) {}
+            override fun onActivityStarted(activity: Activity) {
+                // shown by Commons in the screen's onCreate, see ModdedAppWarning.kt
+                activity.removeModdedAppWarning()
+            }
             override fun onActivityPaused(activity: Activity) {}
             override fun onActivityStopped(activity: Activity) {}
             override fun onActivitySaveInstanceState(activity: Activity, outState: Bundle) {}

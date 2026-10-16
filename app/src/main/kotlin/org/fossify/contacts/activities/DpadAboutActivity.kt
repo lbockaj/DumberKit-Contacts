@@ -29,7 +29,9 @@ class DpadAboutActivity : SimpleActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
-        setupEdgeToEdge(padBottomSystem = listOf(binding.aboutNestedScrollview))
+        // the bottom inset shrinks the scroll view instead of padding it: Android's NestedScrollView ignores its padding when
+        // it scrolls to the focused row, the last row ended up under the navigation bar
+        setupEdgeToEdge(moveBottomSystem = listOf(binding.aboutNestedScrollview))
 
         binding.aboutVersion.text = getString(R.string.dpad_about_version, BuildConfig.VERSION_NAME)
         binding.aboutIcon.setImageResource(getAppIconIDs().getOrNull(getAppIconColors().indexOf(baseConfig.appIconColor)) ?: R.mipmap.ic_launcher_red)

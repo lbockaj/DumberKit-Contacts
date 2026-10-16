@@ -40,7 +40,9 @@ class SettingsActivity : SimpleActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
-        setupEdgeToEdge(padBottomSystem = listOf(binding.settingsNestedScrollview))
+        // the bottom inset shrinks the scroll view instead of padding it: Android's NestedScrollView ignores its padding when
+        // it scrolls to the focused row, the last row ended up under the navigation bar
+        setupEdgeToEdge(moveBottomSystem = listOf(binding.settingsNestedScrollview))
         setupMaterialScrollListener(binding.settingsNestedScrollview, binding.settingsAppbar)
     }
 

@@ -71,6 +71,9 @@ fun Context.checkAndBackupContactsOnBoot() {
         if (missedPreviousBackup) {
             // device was probably off at the scheduled time so backup now
             backupContacts()
+        } else {
+            // a reboot clears the alarms: the next backup has to be scheduled again
+            scheduleNextAutomaticBackup()
         }
     }
 }

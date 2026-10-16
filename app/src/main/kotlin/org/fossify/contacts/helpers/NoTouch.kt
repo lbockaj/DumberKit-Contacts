@@ -2,9 +2,14 @@ package org.fossify.contacts.helpers
 
 import android.annotation.SuppressLint
 import android.app.Activity
+import android.content.res.ColorStateList
 import android.view.View
+import android.view.ViewGroup
 import android.view.Window
 import android.view.WindowManager
+import android.widget.Button
+import android.widget.CompoundButton
+import org.fossify.commons.extensions.getProperTextColor
 import org.fossify.contacts.R
 import org.fossify.contacts.extensions.config
 
@@ -87,6 +92,8 @@ private fun coverOtherWindows() {
         }
 
         root.setTag(R.id.dpad_touch_blocker, true)
+        // the dialog's content may still be filled in right after it opens
+        root.post { colorFocusedDialogButtons(root) }
         if (root.context.config.dpadTouchEnabled) {
             return@forEach
         }
@@ -96,6 +103,26 @@ private fun coverOtherWindows() {
         try {
             (root.context.getSystemService(Activity.WINDOW_SERVICE) as WindowManager).updateViewLayout(root, params)
         } catch (ignored: Exception) {
+        }
+    }
+}
+
+/**
+ * Dialog buttons keep their own style (dpad_dialog_buttons.xml), only the focused one gets the text color: its label
+ * in the primary color was hard to read on the tinted background.
+ */
+private fun colorFocusedDialogButtons(view: View) {
+    if (view is Button && view !is CompoundButton && view.getTag(R.id.dpad_focus_prepared) == null) {
+        view.setTag(R.id.dpad_focus_prepared, true)
+        view.setTextColor(
+            ColorStateList(
+                arrayOf(intArrayOf(android.R.attr.state_focused), intArrayOf()),
+                intArrayOf(view.context.getProperTextColor(), view.currentTextColor)
+            )
+        )
+    } else if (view is ViewGroup) {
+        for (i in 0 until view.childCount) {
+            colorFocusedDialogButtons(view.getChildAt(i))
         }
     }
 }

@@ -1,0 +1,5 @@
+• Imported contacts show up right away
+• Exports and backups keep full addresses and the preferred number
+• Automatic backups stay scheduled after a reboot
+• No more empty dialog or "fake version" warning
+• Tabs and Save stay above an on-screen navigation bar

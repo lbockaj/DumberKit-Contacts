@@ -67,7 +67,9 @@ class ViewContactActivity : ContactActivity() {
             return
         }
 
-        setupEdgeToEdge(padTopSystem = listOf(binding.contactScrollview), padBottomSystem = listOf(binding.contactScrollview))
+        // the bottom inset shrinks the scroll view instead of padding it: Android's ScrollView ignores its padding when
+        // it scrolls to the focused row, the last row (Save) ended up under the navigation bar
+        setupEdgeToEdge(padTopSystem = listOf(binding.contactScrollview), padBottomSystem = listOf(binding.contactWrapper))
 
         showFields = config.showContactFields
         setupMenu()

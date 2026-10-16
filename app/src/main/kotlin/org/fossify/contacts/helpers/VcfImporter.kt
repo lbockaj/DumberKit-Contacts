@@ -75,7 +75,9 @@ class VcfImporter(val activity: SimpleActivity) {
                         ""
                     }
 
-                    val preferred = getPreferredValue(it.types.lastOrNull()?.value) == 1
+                    // vCard 4 marks it with PREF=1, vCard 3 with a plain PREF among the types
+                    val preferred = getPreferredValue(it.types.lastOrNull()?.value) == 1 ||
+                        it.pref == 1 || it.types.any { type -> type.value.equals(PREF, ignoreCase = true) }
                     phoneNumbers.add(
                         PhoneNumber(
                             value = number,
@@ -289,6 +291,11 @@ class VcfImporter(val activity: SimpleActivity) {
         } catch (e: Exception) {
             activity.showErrorToast(e, Toast.LENGTH_LONG)
             contactsFailed++
+        }
+
+        // the private contacts aren't in Android's contacts provider, nothing tells the main screen about them
+        if (contactsImported > 0) {
+            ContactsChanges.pending = true
         }
 
         return when {

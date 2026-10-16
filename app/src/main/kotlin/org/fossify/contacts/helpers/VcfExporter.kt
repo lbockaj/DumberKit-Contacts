@@ -129,8 +129,9 @@ class VcfExporter {
                             it.street,
                             it.neighborhood
                         )
-                            .map { it.isEmpty() }
-                            .fold(false) { a, b -> a || b }
+                            // DumberKit: the separate parts whenever there are any, the formatted address only
+                            // without them (Fossify wrote it alone when all parts were filled in)
+                            .any { it.isNotEmpty() }
                     ) {
                         address.country = it.country
                         address.region = it.region

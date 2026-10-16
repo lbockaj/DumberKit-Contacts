@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <item name="dpad_touch_blocker" type="id" />
+    <item name="dpad_focus_prepared" type="id" />
     <item name="dpad_group_add_contacts" type="id" />
     <!-- Compact sizes for small keypad phone screens (~480x640) -->
     <dimen name="dpad_toolbar_height">40dp</dimen>

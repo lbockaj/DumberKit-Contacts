@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.0.1] - 2026-10-16
+### Fixed
+- Contacts imported into the phone storage show up right away, not only after reopening the app
+- Exported and backed up addresses keep all their parts (PO box, city, postcode…) when every part is filled in
+- vCard 3 files keep the preferred phone number on import
+- Leaving the editor of a contact with an address no longer asks to save unchanged data, and saving other changes
+  keeps the address's separate parts (city, postcode…)
+- Automatic backups stay scheduled after a reboot
+- An empty dimmed window after the first permission prompt (Android 16): the warning "You are using a fake version of
+  the app", which Commons showed now and then and at the first start, no longer shows up
+- On phones with an on-screen navigation bar the tabs, the Save row and the last rows of the settings stay above it
+- The selected dialog button is much easier to see
+- The app icon has the same size as in the other DumberKit apps
+
 ## [1.0.0] - 2026-10-09
 First public release.
 ### Changed

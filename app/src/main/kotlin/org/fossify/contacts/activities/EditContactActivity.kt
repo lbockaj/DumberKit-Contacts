@@ -184,9 +184,11 @@ class EditContactActivity : ContactActivity() {
             return
         }
 
+        // the bottom inset shrinks the scroll view instead of padding it: Android's ScrollView ignores its padding when
+        // it scrolls to the focused row, the last row (Save) ended up under the navigation bar
         setupEdgeToEdge(
             padTopSystem = listOf(binding.contactScrollview),
-            padBottomImeAndSystem = listOf(binding.contactScrollview)
+            padBottomImeAndSystem = listOf(binding.contactWrapper)
         )
         setupMenu()
         setupDpadRows()
@@ -1604,7 +1606,14 @@ class EditContactActivity : ContactActivity() {
                 val addressLabel = if (addressType == StructuredPostal.TYPE_CUSTOM) addressHolder.contactAddressType.value else ""
 
                 if (address.isNotEmpty()) {
-                    addresses.add(Address(address, addressType, addressLabel, "", "", "", "", "", "", ""))
+                    // DumberKit: an address left as it was keeps its separate parts (city, postcode…), which this
+                    // single field doesn't show; without them it counted as changed and saving lost them
+                    val original = contact?.addresses?.getOrNull(i)
+                    if (original != null && original.value == address && original.type == addressType && original.label == addressLabel) {
+                        addresses.add(original)
+                    } else {
+                        addresses.add(Address(address, addressType, addressLabel, "", "", "", "", "", "", ""))
+                    }
                 }
             }
         }
